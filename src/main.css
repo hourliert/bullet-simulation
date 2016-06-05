@@ -8,3 +8,19 @@ body {
   height: 100%;
 }
 
+#popups-container {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 320px;
+  overflow-y: auto;
+}
+
+.popup {
+  margin: 5px;
+  padding: 5px;
+  background: #fff;
+  border-radius: 2px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  user-select: none;
+}

@@ -6,4 +6,6 @@
 
 var C = require('./core/game');
 
-new C.Game();
+var game = new C.Game();
+
+console.log('The game is running', game);
