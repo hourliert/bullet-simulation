@@ -15,6 +15,12 @@ var E = require('../ui/popups_manager');
  * @constructor
  */
 function Game() {
+  /**
+   * Last time the render occured
+   * @type {number}
+   */
+  this.lastRenderTime = Number(new Date());
+
   // Dependency Injections
   this.scene = new S.Scene();
   this.renderer = new R.CanvasRenderer(this.scene);
@@ -63,7 +69,16 @@ Game.prototype.onBulletHitsBorder = function onBulletHitsBorder(bullet) {
  * Computes the physic and renders the game at each frame.
  */
 Game.prototype.loop = function loop() {
-  this.engine.nextPositions(this.onBulletHitsBorder.bind(this));
+  // compute the previous time budget.
+  // we are assuming that we are going to need the same time to compute and render this frame
+  var now = Number(new Date());
+  var timeBudget = now - this.lastRenderTime;
+  this.lastRenderTime = now;
+
+  // compute the physic
+  this.engine.nextPositions(timeBudget, this.onBulletHitsBorder.bind(this));
+
+  // render the game
   this.renderer.render();
 
   window.requestAnimationFrame(this.loop.bind(this));

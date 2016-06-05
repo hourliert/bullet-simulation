@@ -5,6 +5,13 @@
 'use strict';
 
 /**
+ * Duration of popups in ms
+ * @type {number}
+ * @const
+ */
+var POPUP_DURATION = 1000;
+
+/**
  * A simple popup manager specialized to display bullet informations.
  * @constructor
  */
@@ -26,7 +33,7 @@ PopupsManager.prototype.addPopup = function addPopup(bullet) {
 
   setTimeout(function() {
     this.popupsContainer.removeChild(popup);
-  }.bind(this), 1000);
+  }.bind(this), POPUP_DURATION);
 };
 
 /**
