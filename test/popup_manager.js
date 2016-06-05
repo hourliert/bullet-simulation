@@ -43,6 +43,17 @@ describe('Popup Manager', function() {
   });
 
   it('adds a new popup', function() {
-    console.log('TODO');
+    manager.addPopup(new BulletMock());
+
+    var popup = document.querySelector('.popup');
+    expect(popup.nodeName).toEqual('DIV');
+    expect(popup.innerText).toEqual('bullet: 0 start: [2,4], end: [5,10]');
+
+    expect(setTimeout.mock.calls[0][1]).toBe(1000);
+
+    jest.runAllTimers();
+
+    popup = document.querySelector('.popup');
+    expect(popup).toEqual(null);
   });
 });
