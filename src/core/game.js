@@ -27,7 +27,7 @@ Game.prototype.onClick = function onClick(e) {
 };
 
 Game.prototype.loop = function loop() {
-  // this.engine.next();
+  this.engine.next();
   this.renderer.render();
 
   window.requestAnimationFrame(this.loop.bind(this));
