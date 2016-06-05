@@ -2,6 +2,8 @@
  * Created by thomashourlier on 6/5/16.
  */
 
-var mod = require('./bullet/bullet');
+'use strict';
 
-console.log('here', mod);
+var C = require('./core/game');
+
+new C.Game();

@@ -1,3 +1,7 @@
 {
-    "extends": "google"
+  "extends": "google",
+  "globals": {
+    "document": true,
+    "window": true
+  }
 }
