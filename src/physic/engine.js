@@ -20,12 +20,12 @@ function PhysicEngine(scene) {
 
 /**
  * Computes the next position of each bullets
- * @param {number} timeBudget the time budget to compute the physic
+ * @param {number} tBudget the time budget to compute the physic
  * @param {Function} onBulletHitsBorder callback called when a bullet hits a scene border
  */
-PhysicEngine.prototype.nextPositions = function(timeBudget, onBulletHitsBorder) {
+PhysicEngine.prototype.nextPositions = function(tBudget, onBulletHitsBorder) {
   this.scene.forEachBullet(
-    this.nextBulletPosition.bind(this, timeBudget, onBulletHitsBorder)
+    this.nextBulletPosition.bind(this, tBudget, onBulletHitsBorder)
   );
 };
 

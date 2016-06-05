@@ -2,6 +2,10 @@
   "extends": "google",
   "globals": {
     "document": true,
-    "window": true
+    "window": true,
+    "jest": true,
+    "describe": true,
+    "it": true,
+    "expect": true
   }
 }

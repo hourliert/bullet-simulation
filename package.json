@@ -8,7 +8,8 @@
     "doc": "jsdoc -c jsdoc.json",
     "lint": "eslint src",
     "start": "webpack-dev-server --inline --hot",
-    "test": "echo \"Error: no test specified\""
+    "test": "jest --coverage",
+    "tdd": "jest --watch"
   },
   "repository": {
     "type": "git",
@@ -27,8 +28,12 @@
   "devDependencies": {
     "eslint": "^2.11.1",
     "eslint-config-google": "^0.5.0",
+    "jest-cli": "^12.1.1",
     "jsdoc": "^3.4.0",
     "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1"
+  },
+  "jest": {
+    "testRegex": "test\/.*\\.js$"
   }
 }
