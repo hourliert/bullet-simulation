@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack",
+    "doc": "jsdoc -c jsdoc.json",
     "lint": "eslint src",
     "start": "webpack-dev-server --inline --hot",
     "test": "echo \"Error: no test specified\""
@@ -26,6 +27,7 @@
   "devDependencies": {
     "eslint": "^2.11.1",
     "eslint-config-google": "^0.5.0",
+    "jsdoc": "^3.4.0",
     "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1"
   }
