@@ -1,0 +1,32 @@
+{
+  "name": "bullet-simulation",
+  "version": "0.0.0",
+  "description": "Bullet Simulation",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "lint": "eslint src",
+    "start": "webpack-dev-server --inline --hot",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hourliert/peopleio-bullet-simulation.git"
+  },
+  "keywords": [
+    "bullet",
+    "simulation"
+  ],
+  "author": "Thomas Hourlier <hourliert@gmail.com> (https://github.com/hourliert)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hourliert/peopleio-bullet-simulation/issues"
+  },
+  "homepage": "https://github.com/hourliert/peopleio-bullet-simulation#readme",
+  "devDependencies": {
+    "eslint": "^2.11.1",
+    "eslint-config-google": "^0.5.0",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
+  }
+}
