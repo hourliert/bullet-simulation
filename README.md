@@ -22,6 +22,11 @@ npm start
 * `npm test`: run all tests with coverage report
 * `npm run tdd`: run tests in watch mode
 
+## FAQ
+### All tests are passing but the coverage is not at 100%
+Be sure to install correctly [canvas](https://www.npmjs.com/package/canvas) in the project root folder.
+This library is used when running renderer unit tests. If this library is not installed. 
+These tests will be empty.
 
 [travis-badge]: https://travis-ci.org/hourliert/bullet-simulation.svg?branch=master
 [travis-link]: https://travis-ci.org/hourliert/bullet-simulation
