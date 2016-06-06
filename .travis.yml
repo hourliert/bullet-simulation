@@ -2,10 +2,21 @@ language: node_js
 node_js:
   - v5
 before_install:
-  - sudo apt-get install -y libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev build-essential g++
   - npm install -g codecov
 script:
   - npm run lint
   - npm test
 after_success:
   - codecov -e TRAVIS_NODE_VERSION
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - libcairo2-dev
+      - libjpeg8-dev
+      - libpango1.0-dev
+      - libgif-dev
+      - g++-4.8
+env:
+  - CXX=g++-4.8
