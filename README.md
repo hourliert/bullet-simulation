@@ -2,8 +2,9 @@
 [![Build Status][travis-badge]][travis-link]
 [![codecov.io][codecov-badge]][codecov-link]
 
-This a bullet game simulation. The user can click anywhere in the page to launch a bullet.
-When this bullet hits a border, a popup with some bullet information is shown.
+This is a bullet game simulation. The user can click anywhere in the page to launch a bullet.
+It has a random velocity and a random angle and follow a random trajectory.
+When this bullet hits a border, a popup with some of its information is shown.
 
 ## Getting started
 
