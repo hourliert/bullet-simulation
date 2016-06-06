@@ -1,6 +1,6 @@
 {
   "name": "bullet-simulation",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Bullet Simulation",
   "main": "index.js",
   "scripts": {
