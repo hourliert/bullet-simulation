@@ -44,9 +44,9 @@ PhysicEngine.prototype.nextBulletPosition = function(timeBudget, cb, bullet) {
   } else {
     bullet.x = nextX;
     bullet.y = nextY;
-    // we slightly alter the bullet angle
-    bullet.angle += (Math.random() - 0.5) * Math.PI / 15;
-    // we slightly alter the bullet speed
+    // we slightly alter the bullet angle. we are using a gaussian function
+    bullet.angle += Math.exp(-Math.pow((3 * bullet.speed - 3.5), 2)) / 10;
+    // we slightly alter the bullet speed. we are using a linear function
     bullet.speed -= (bullet.speed - 0.1) / 90;
   }
 };
