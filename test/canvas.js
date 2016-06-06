@@ -54,4 +54,40 @@ describe('Canvas Renderer', function() {
     expect(renderer.canvas.width).toEqual(100);
     expect(renderer.canvas.height).toEqual(1100);
   });
+
+  it('renders the scene', function(done) {
+    try {
+      require.resolve('canvas');
+    } catch (er) {
+      done();
+    }
+
+    renderer.ctx.clearRect = jest.fn();
+
+    renderer.render();
+
+    expect(renderer.ctx.clearRect).toBeCalled();
+    expect(scene.forEachBullet).toBeCalled();
+
+    done();
+  });
+
+  it('renders a bullet', function(done) {
+    try {
+      require.resolve('canvas');
+    } catch (er) {
+      done();
+    }
+
+    var bullet = new BulletMock(10, 10);
+
+    renderer.ctx.arc = jest.fn();
+
+    renderer.renderBullet(bullet);
+
+    expect(renderer.ctx.arc).toBeCalledWith(6, 6, 4, 0, 2 * Math.PI);
+    expect(renderer.ctx.fillStyle).toEqual('#000000');
+
+    done();
+  });
 });
