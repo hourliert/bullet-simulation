@@ -23,10 +23,10 @@ describe('Physic Engine', function() {
   var scene;
 
   beforeEach(function() {
-    var P = require('../src/physic/engine');
+    var PhysicEngine = require('../src/physic/engine');
 
     scene = new SceneMock();
-    engine = new P.PhysicEngine(scene);
+    engine = new PhysicEngine(scene);
   });
 
   it('defines a physic engine', function() {

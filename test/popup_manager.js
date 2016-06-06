@@ -18,14 +18,14 @@ describe('Popup Manager', function() {
   var popupsContainer;
 
   beforeEach(function() {
-    var P = require('../src/ui/popups_manager');
+    var PopupsManager = require('../src/ui/popups_manager');
 
     popupsContainer = document.createElement('div');
 
     popupsContainer.id = 'popups-container';
     body.appendChild(popupsContainer);
 
-    manager = new P.PopupsManager();
+    manager = new PopupsManager();
   });
 
   afterEach(function() {

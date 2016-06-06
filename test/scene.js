@@ -12,9 +12,9 @@ describe('Scene', function() {
   var bullet2 = new BulletMock();
 
   beforeEach(function() {
-    var S = require('../src/game_objects/scene');
+    var Scene = require('../src/game_objects/scene');
 
-    scene = new S.Scene();
+    scene = new Scene();
     scene.bullets = [bullet1, bullet2];
   });
 

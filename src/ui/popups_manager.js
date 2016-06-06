@@ -49,6 +49,4 @@ PopupsManager.prototype.computeBulletText = function computeBulletText(bullet) {
     'end: [' + f(bullet.x) + ',' + f(bullet.y) + ']';
 };
 
-module.exports = {
-  PopupsManager: PopupsManager
-};
+module.exports = PopupsManager;

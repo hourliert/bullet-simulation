@@ -61,6 +61,4 @@ PhysicEngine.prototype.bulletHitsBorder = function bulletHitsBorder(bullet) {
     (bullet.y > this.scene.height || bullet.y < 0);
 };
 
-module.exports = {
-  PhysicEngine: PhysicEngine
-};
+module.exports = PhysicEngine;

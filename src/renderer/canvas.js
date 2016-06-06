@@ -75,7 +75,5 @@ CanvasRenderer.prototype.renderBullet = function render(bullet) {
   this.ctx.fill();
 };
 
-module.exports = {
-  CanvasRenderer: CanvasRenderer
-};
+module.exports = CanvasRenderer;
 

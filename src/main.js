@@ -4,8 +4,8 @@
 
 'use strict';
 
-var C = require('./core/game');
+var Game = require('./core/game');
 
-var game = new C.Game();
+var game = new Game();
 
 console.log('The game is running', game);

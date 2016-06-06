@@ -32,6 +32,4 @@ function Bullet(x, y) {
  */
 Bullet.nextId = 0;
 
-module.exports = {
-  Bullet: Bullet
-};
+module.exports = Bullet;

@@ -19,12 +19,12 @@ describe('Game', function() {
       done();
     }
 
-    var C = require('../src/core/game');
+    var Game = require('../src/core/game');
 
     window.addEventListener = jest.fn();
     window.requestAnimationFrame = jest.fn();
 
-    game = new C.Game();
+    game = new Game();
 
     done();
   });

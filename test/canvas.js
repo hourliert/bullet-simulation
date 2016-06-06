@@ -25,7 +25,7 @@ describe('Canvas Renderer', function() {
   var scene;
 
   beforeEach(function() {
-    var R = require('../src/renderer/canvas');
+    var CanvasRenderer = require('../src/renderer/canvas');
 
     canvas = document.createElement('canvas');
 
@@ -33,7 +33,7 @@ describe('Canvas Renderer', function() {
     body.appendChild(canvas);
 
     scene = new SceneMock();
-    renderer = new R.CanvasRenderer(scene);
+    renderer = new CanvasRenderer(scene);
   });
 
   afterEach(function() {

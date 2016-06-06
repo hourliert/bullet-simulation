@@ -67,6 +67,4 @@ Scene.prototype.removeBullet = function addBullet(bullet) {
   }
 };
 
-module.exports = {
-  Scene: Scene
-};
+module.exports = Scene;

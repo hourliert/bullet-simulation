@@ -4,11 +4,11 @@
 
 'use strict';
 
-var B = require('../game_objects/bullet');
-var S = require('../game_objects/scene');
-var R = require('../renderer/canvas');
-var P = require('../physic/engine');
-var E = require('../ui/popups_manager');
+var Bullet = require('../game_objects/bullet');
+var Scene = require('../game_objects/scene');
+var CanvasRenderer = require('../renderer/canvas');
+var PhysicEngine = require('../physic/engine');
+var PopupsManager = require('../ui/popups_manager');
 
 /**
  * A bullet simulation game.
@@ -22,10 +22,10 @@ function Game() {
   this.lastRenderTime = Number(new Date());
 
   // Dependency Injections
-  this.scene = new S.Scene();
-  this.renderer = new R.CanvasRenderer(this.scene);
-  this.engine = new P.PhysicEngine(this.scene);
-  this.popupContainer = new E.PopupsManager();
+  this.scene = new Scene();
+  this.renderer = new CanvasRenderer(this.scene);
+  this.engine = new PhysicEngine(this.scene);
+  this.popupContainer = new PopupsManager();
 
   // setup window event listeners
   window.addEventListener('resize', this.onResize.bind(this), false);
@@ -51,7 +51,7 @@ Game.prototype.onClick = function onClick(e) {
   var x = e.clientX;
   var y = e.clientY;
 
-  var bullet = new B.Bullet(x, y);
+  var bullet = new Bullet(x, y);
   this.scene.addBullet(bullet);
 };
 
@@ -84,6 +84,4 @@ Game.prototype.loop = function loop() {
   window.requestAnimationFrame(this.loop.bind(this));
 };
 
-module.exports = {
-  Game: Game
-};
+module.exports = Game;
