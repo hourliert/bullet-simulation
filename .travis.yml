@@ -1,7 +1,9 @@
 language: node_js
 node_js:
   - v5
-before_install: npm install -g codecov
+before_install:
+  - sudo apt-get install -y libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev build-essential g++
+  - npm install -g codecov
 script:
   - npm run lint
   - npm test
