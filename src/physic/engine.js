@@ -36,14 +36,11 @@ PhysicEngine.prototype.nextPositions = function(tBudget, onBulletHitsBorder) {
  * @param {Bullet} bullet the bullet
  */
 PhysicEngine.prototype.nextBulletPosition = function(timeBudget, cb, bullet) {
-  var nextX = bullet.x + bullet.speed * timeBudget * Math.cos(bullet.angle);
-  var nextY = bullet.y + bullet.speed * timeBudget * Math.sin(bullet.angle);
-
   if (this.bulletHitsBorder(bullet)) {
     cb(bullet);
   } else {
-    bullet.x = nextX;
-    bullet.y = nextY;
+    bullet.x += bullet.speed * timeBudget * Math.cos(bullet.angle);
+    bullet.y += bullet.speed * timeBudget * Math.sin(bullet.angle);
     // we slightly alter the bullet angle. we are using a gaussian function
     bullet.angle += Math.exp(-Math.pow((3 * bullet.speed - 3.5), 2)) / 10;
     // we slightly alter the bullet speed. we are using a linear function
