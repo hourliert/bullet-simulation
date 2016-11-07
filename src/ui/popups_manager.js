@@ -25,15 +25,10 @@ function PopupsManager() {
  * @param {Bullet} bullet the bullet
  */
 PopupsManager.prototype.addPopup = function addPopup(bullet) {
-  var popup = document.createElement('div');
-  popup.className = 'popup';
-  popup.innerText = this.computeBulletText(bullet);
-
-  this.popupsContainer.appendChild(popup);
-
-  setTimeout(function() {
-    this.popupsContainer.removeChild(popup);
-  }.bind(this), POPUP_DURATION);
+  /*
+   TODO: Add a popup to the popupsContainer and make it disappear after POPUP_DURATION
+   The popup should have the CSS class 'popup' and display the text computed by computeBulletText
+   */
 };
 
 /**

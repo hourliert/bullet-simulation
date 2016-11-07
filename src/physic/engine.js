@@ -54,8 +54,7 @@ PhysicEngine.prototype.nextBulletPosition = function(timeBudget, cb, bullet) {
  * @return {boolean} Has the bullet hit a scene border?
  */
 PhysicEngine.prototype.bulletHitsBorder = function bulletHitsBorder(bullet) {
-  return (bullet.x > this.scene.width || bullet.x < 0) ||
-    (bullet.y > this.scene.height || bullet.y < 0);
+  // TODO: Detect that a bullet has hit a scene border
 };
 
 module.exports = PhysicEngine;

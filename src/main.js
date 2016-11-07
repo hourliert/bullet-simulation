@@ -6,6 +6,14 @@
 
 var Game = require('./core/game');
 
-var game = new Game();
+/**
+ * Runs the simulation
+ */
+function main() {
+  var game = new Game();
 
-console.log('The game is running', game);
+  console.log('The game is running', game);
+}
+
+main();
+

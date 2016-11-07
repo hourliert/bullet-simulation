@@ -29,7 +29,7 @@ function Game() {
 
   // setup window event listeners
   window.addEventListener('resize', this.onResize.bind(this), false);
-  window.addEventListener('click', this.onClick.bind(this), false);
+  // TODO: Listen to the click event on the window
 
   // launch the render loop!
   window.requestAnimationFrame(this.loop.bind(this));
@@ -48,11 +48,7 @@ Game.prototype.onResize = function onResize() {
  * @param {Event} e the click event
  */
 Game.prototype.onClick = function onClick(e) {
-  var x = e.clientX;
-  var y = e.clientY;
-
-  var bullet = new Bullet(x, y);
-  this.scene.addBullet(bullet);
+  // TODO: Create a bullet at the cursor position and add it to the scene
 };
 
 /**
@@ -60,8 +56,7 @@ Game.prototype.onClick = function onClick(e) {
  * @param {Bullet} bullet the bullet that has hit a border
  */
 Game.prototype.onBulletHitsBorder = function onBulletHitsBorder(bullet) {
-  this.popupContainer.addPopup(bullet);
-  this.scene.removeBullet(bullet);
+  // TODO: Add a popup and remove the bullet from the scene
 };
 
 /**
